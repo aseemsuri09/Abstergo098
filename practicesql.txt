@@ -1,0 +1,31 @@
+creeate or replace package body bankproject
+as
+procedure prcAccountCreate(
+Fname Accounts.FirstName%type,
+Lname Accounts.LastName%type,
+)
+AS
+BEGIN
+declare 
+accno number;
+begin
+select case when max(accountNo) is NULL THEN 1
+else
+max(accountNo) +1 END into accno from accounts;
+
+insert into 
+Accounts(AccountNo,FirstName,LastName,City,State,Amount)
+
+values(accno,Fname,Lname,Cit,Stat,Amt,Cf,Actype);
+dbms_output.put_line('Account Created Successfully');
+end;
+END;
+
+function searchAccount(accno accounts.accountNo%type) return number
+as 
+cnt number;
+begin 
+select count(*) into cnt from Accounts where
+accountno = accno;
+return cnt;
+end;

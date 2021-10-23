@@ -1,0 +1,132 @@
+Oracle Download:
+
+
+C:\Users\Admin>sqlplus / as sysdba
+SQL>select version from v$instance;	--> TO know the version number
+SQL> select name from v$database;	--> To know the DB name
+
+SQL Developer download:
+-----------------------
+https://www.oracle.com/tools/downloads/sqldev-downloads.html
+
+-------------------------------------------
+Oracle -- Database		   -- physical
+DataBase Management System(DBMS)   -- software
+
+
+Terminologies used:
+--------------------
+Table -- Relation
+Row   -- Tuple
+Column -- Attribute
+no.of rows -- cardinality
+no.of columns -- degree of the tables
+
+
+E.F Codd 12 rules to RDBMS:
+https://en.wikipedia.org/wiki/Codd%27s_12_rules
+------------------------------------------
+Normalization:  splitting up a very big table to small tables
+Structured English Query Lang (SEQL)
+
+Why?
+ To avoid data redundancy
+
+-------------------------------------------------
+SQL
+---
+DDL - Data Definition Language
+       -- Table and its structure
+       -- create, alter, drop, truncate, rename
+DML - Data Manipulation Language
+        -- Associated with table values
+        -- insert, update, delete
+DCL - Data Control Language
+        -- priviledge of the user w.r.t table
+        -- grant, revoke
+TCL - Transaction Control Language
+        -- associated with persistance.
+        commit, rollback, savepoint
+DQL - Data Query Language
+       -- retrival of data
+       -- select
+
+
+-------------------------------------------------------------------
+
+Other DB Objects:
+------------------
+Table
+view - Logically represents subsets of data from one or more tables
+
+TYpes:
+1) Simple view  - view based on one table 
+2) Complex view  - view based on multiple table
+
+CREATE [OR REPLACE] [FORCE|NOFORCE] VIEW view
+  [(alias[, alias]...)]
+ AS subquery
+[WITH CHECK OPTION [CONSTRAINT constraint]]
+[WITH READ ONLY [CONSTRAINT constraint]];
+
+
+Sequence -AUto Generates numeric values
+
+CREATE SEQUENCE sequence
+       [INCREMENT BY n]
+       [START WITH n]
+       [{MAXVALUE n | NOMAXVALUE}]
+       [{MINVALUE n | NOMINVALUE}]
+       [{CYCLE | NOCYCLE}]
+       [{CACHE n | 	NOCACHE}];
+
+
+Index -- Improves the performance of data retrieval queries 
+
+synonyms - Gives alternative names to objects
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
